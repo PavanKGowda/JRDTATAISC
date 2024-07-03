@@ -1,4 +1,3 @@
-const exploreCoursesButton = document.querySelector('.btn-79');
 const dropdown = document.querySelector('.dropdown');
 const dropbtn = document.querySelector('.dropbtn');
 const menuBtn = document.querySelector('.menu-btn');
@@ -7,9 +6,7 @@ const dropdownContent = document.querySelector('.dropdown-content');
 const navLinks = document.querySelector('.nav-links');
 
 
-exploreCoursesButton.addEventListener('click', () => {
-  window.open('/templates/projects.html', '_self');
-});
+
 
 menuBtn.addEventListener('click', () => {
   dropdownContent.classList.toggle('show');
@@ -73,4 +70,35 @@ function hasScrolled() {
 
   lastScrollTop = st;
 }
+let currentIndex = 0
 
+function showSlide(index) {
+  const slider = document.querySelector('.slider')
+  const images = document.querySelectorAll('.slider img')
+  const imageWidth = images[0].offsetWidth
+
+  images.forEach((image, i) => {
+    image.style.display = i === index ? 'block' : 'none'
+  })
+
+  slider.style.transform = `translateX(${(-index * imageWidth)}px)`
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + getTotalSlides()) % getTotalSlides()
+  showSlide(currentIndex)
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % getTotalSlides()
+  showSlide(currentIndex)
+}
+
+function getTotalSlides() {
+  return document.querySelectorAll('.slider img').length
+}
+
+// Initial setup
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentIndex)
+})

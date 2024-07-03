@@ -398,7 +398,7 @@ nav {
   
 
   .footer-distributed{
-    background: rgb(79, 135, 246);
+    background: linear-gradient(to bottom, rgb(0, 63, 189), rgb(152, 180, 253), rgb(0, 63, 189));
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -417,7 +417,7 @@ nav {
   /* Footer left */
   
   .footer-distributed .footer-left{
-    width: 40%;
+    width: 30%;
   }
   
   /* The company logo */
@@ -467,7 +467,7 @@ nav {
   /* Footer Center */
   
   .footer-distributed .footer-center{
-    width: 35%;
+    width: 30%;
   }
   
   .footer-distributed .footer-center i{
@@ -485,24 +485,25 @@ nav {
   }
   
   .footer-distributed .footer-center i.fa-envelope{
-    font-size: 17px;
+    font-size: 20px;
     line-height: 38px;
   }
   
   .footer-distributed .footer-center p{
     display: inline-block;
     color: #000000;
-    font-weight:400;
+    font-weight:bold;
     vertical-align: middle;
     margin:0;
+    font-size: 20px;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
   }
   
   .footer-distributed .footer-center p span{
     display:block;
-    font-weight: normal;
-    font-size:14px;
+    font-weight:550;
+    font-size:15px;
     line-height:2;
   }
   
@@ -528,21 +529,23 @@ nav {
   /* Footer Right */
   
   .footer-distributed .footer-right{
-    width: 20%;
+    width: 39%;
   }
   
   .footer-distributed .footer-company-about{
     line-height: 20px;
     color:  #000000;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
   }
   
   .footer-distributed .footer-company-about span{
     display: block;
     color:  #000000;
-    font-size: 14px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     margin-bottom: 20px;
   }

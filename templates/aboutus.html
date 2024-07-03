@@ -9,17 +9,17 @@
 
 </head>
 <body>
-  <header>
+  <header class="nav-down">
     <div class="container">
       <nav>
         <div class="logo">
           <img src="/images/img/Logo.png" alt="logo" id="logo">
-          <h2><span>JRD</span>Innovate</h2>
+          <h2>JRD TATA <span>ISC</span></h2>
         </div>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="courses.html">Courses</a></li>
+          <li><a href="/templates/index.html">Home</a></li>
+          <li><a href="/templates/events.html">Event</a></li>
+          <li><a href="/templates/courses.html">Courses</a></li>
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">
               <span class="menu-btn">
@@ -30,10 +30,10 @@
               </span>
             </a>
             <div class="dropdown-content">
-              <a href="project.html">Project</a>
-              <a href="ourteam.html">Our Team</a>
-              <a href="aboutus.html">About Us</a>
-              <a href="regpays.html">Registration and Payment</a>
+              <a href="/templates/projects.html">Project</a>
+              <a href="/templates/ourteam.html">Our Team</a>
+              <a href="/templates/aboutus.html">About Us</a>
+              <a href="/templates/regpays.html">Registration and Payment</a>
             </div>
           </li>
         </ul>
@@ -43,9 +43,88 @@
   <section id="Profile">
     <button onclick="window.location.href='profile.html'"></button>
   </section>
-  <div class:"IISc-Lo">
-    <div>
-        <img src="Logo.jpg" alt="IISc" id="Ilog">
-        <h2> About Mission Pragati</h2>
+
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <div class="slider">
+        <div class="slide">
+          <img src="/images/img/abt1.png" alt="Image 1" />
+          <div class="image-name">1. MAIN OFFICE (COURTESY ARTPARK, OFFICE OF REGISTRAR IISC, JRD TATA LIBRARY)</div>
+        </div>
+        <div class="slide">
+          <img src="/images/img/abt2.png" alt="Image 2" />
+        </div>
+        <div class="slide">
+          <img src="/images/img/abt3.png" alt="Image 3" />
+          <div class="image-name">2.	BRAINSTORMING ROOM AND LAB 1 (ORIGINAL WORKSTATION CUM OFFICE)</div>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
     </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
   </div>
+  <br>
+  <footer class="footer-distributed">
+    <div class="footer-left">
+  
+      <h3>JRD<span>TATA ISC</span> </h3>
+  
+      <p class="footer-links">
+        <a href="/templates/index.html" class="link-1">HOME</a>
+        
+        <a href="/templates/projects.html">PROJECTS</a>
+        
+        <a href="/templates/ourteam.html">OUR TEAM</a>
+        
+        <a href="/templates/aboutus.html">ABOUT US</a>
+      </p>
+  
+      <p class="footer-company-name">JRD Innovation Support Center © 2024</p>
+    </div>
+  
+    
+  
+   
+    <div class="footer-center">
+  
+      <div>
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        <p>India Institiue of Science <span>Bengaluru - 560012, Karnataka, India.</span></p>
+      </div>
+  
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 8888666588</p>
+      </div>
+  
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">jrdisc.innovate@iisc.in</a></p>
+      </div>
+  
+    </div>
+  
+    <div class="footer-right">
+  
+      <p class="footer-company-about">
+        <span>About the JRD Tata ISC</span>
+        The JRD Tata Innovation Support Centre engages youth in solving national problems through collaboration with government and industry. With IISc experts and interns, we focus on sectors like security, infrastructure, telecom, and healthcare, providing R&D services, developing prototypes, and partnering with MSMEs for production and scaling solutions effectively.
+      </p>
+  
+      <div class="footer-icons">
+  
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/login?lang=en"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+  
+      </div>
+  
+    </div>
+  </footer>
+    <script src="/javascript/aboutus.js"></script>
+  
+    
+  </body>
+  </html> 
