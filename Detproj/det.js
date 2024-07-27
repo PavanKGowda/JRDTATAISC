@@ -44,33 +44,21 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-
-/*Fly-in*/
 document.addEventListener('DOMContentLoaded', function() {
   const footerItems = document.querySelectorAll('.footer-left, .footer-center, .footer-right');
-  const courseItems = document.querySelectorAll('.courses-heading, .course-card');
-  const projItems = document.querySelectorAll('.project-heading, .program-card');
-  const eventItems = document.querySelectorAll('.news-heading, .card');
-  const bannerItems = document.querySelectorAll('.home h1, .banner-slider, .white-box');
+  const projItems = document.querySelectorAll('.home h1, .project');
+  const tetItems = document.querySelectorAll('.team-det, .project-card, .project .project-abstract, .proj-card-image, .category');
 
-  function checkVisibility() {
-    [...footerItems, ...courseItems, ...projItems, ...eventItems, ...bannerItems].forEach(item => {
-      const rect = item.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        item.classList.add('visible');
-      }
-    });
-  }
+    function checkVisibility() {
+        [...footerItems, ...projItems, ...tetItems].forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                item.classList.add('visible');
+            }
+        });
+    }
 
-  window.addEventListener('scroll', checkVisibility);
-  checkVisibility(); // Check visibility in case the elements are already in view on page load
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Check visibility in case the elements are already in view on page load
 });
 
-window.onload = function() {
-  document.getElementById("section2").scrollIntoView();
-  var sections = document.querySelectorAll('.section');
-  sections.forEach(function(section) {
-      section.classList.add('fly-in');
-  });
-};

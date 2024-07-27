@@ -5,9 +5,6 @@ const closeBtn = document.querySelector('.close-btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 const navLinks = document.querySelector('.nav-links');
 const header = document.querySelector('header');
-const cardSlider = document.querySelector('.card-slider');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
 
 menuBtn.addEventListener('click', () => {
   dropdownContent.classList.toggle('show');
@@ -91,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function prevSlide() {
     if (currentSlide > 0) {
       currentSlide--;
-    } else {  
+    } else {
       currentSlide = totalSlides - 1; // Loop back to the last slide
     }
     showSlide(currentSlide);
@@ -117,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(currentSlide);
 
   // Auto-slide change every 3 seconds
-  setInterval(nextSlide, 4000);
+  setInterval(nextSlide, 2500);
 });
 
 
@@ -142,53 +139,20 @@ document.addEventListener('DOMContentLoaded', function() {
   checkVisibility(); // Check visibility in case the elements are already in view on page load
 });
 
-/* Card Slider */
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card-slider .card');
-  let currentCard = 0;
-  const totalCards = cards.length;
-  const cardsToShow = 2;
+document.addEventListener("DOMContentLoaded", function() {
+  const eventCards = document.querySelectorAll('.event-card, .team-det');
 
-  function showCards(index) {
-    cards.forEach((card, idx) => {
-      card.style.display = 'none';
-      if (idx >= index && idx < index + cardsToShow) {
-        card.style.display = 'block';
+  function checkPosition() {
+    const windowHeight = window.innerHeight;
+    eventCards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < windowHeight - 100) { // 100px before the card comes into view
+        card.classList.add('fly-in');
       }
     });
-    updateCardButtons();
   }
 
-  function nextCard() {
-    if (currentCard < totalCards - cardsToShow) {
-      currentCard++;
-      showCards(currentCard);
-    }
-  }
-
-  function prevCard() {
-    if (currentCard > 0) {
-      currentCard--;
-      showCards(currentCard);
-    } 
-  }
-
-  function updateCardButtons() {
-    if (currentCard === 0) {
-      prevBtn.style.display = 'none';
-    } else {
-      prevBtn.style.display = 'block';
-    }
-    if (currentCard >= totalCards - cardsToShow) {
-      nextBtn.style.display = 'none';
-    } else {
-      nextBtn.style.display = 'block';
-    }
-    console.log(`Current card: ${currentCard}, Prev button: ${prevBtn.style.display}, Next button: ${nextBtn.style.display}`);
-  }
-
-  prevBtn.addEventListener('click', prevCard);
-  nextBtn.addEventListener('click', nextCard);
-
-  showCards(currentCard);
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', checkPosition);
+  checkPosition(); // Initial check on page load
 });

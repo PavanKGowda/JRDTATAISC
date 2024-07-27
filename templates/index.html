@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JRD Innovate</title>
+    <title>JRD TATA Innovation Support Center</title>
     <link rel="icon" href="/images/img/Logo.png">
     <link rel="stylesheet" href="/images/cssfiles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -11,6 +11,9 @@
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -18,13 +21,13 @@
     <div class="container">
       <nav>
         <div class="logo">
-          <img src="/images/img/Logo.png" alt="logo" id="logo">
-          <h2>JRD TATA <span>ISC</span></h2>
+          <img src="/images/img/jrdl.png" alt="logo" id="logo">
+
         </div>
         <ul class="nav-links">
           <li><a href="/templates/index.html">Home</a></li>
           <li><a href="/templates/events.html">Event</a></li>
-          <li><a href="/templates/courses.html">Courses</a></li>
+          <li><a href="/templates/projects.html">Project</a></li>
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">
               <span class="menu-btn">
@@ -35,190 +38,178 @@
               </span>
             </a>
             <div class="dropdown-content">
-              <a href="/templates/projects.html">Project</a>
+              <a href="/templates/courses.html">Courses</a>
               <a href="/templates/ourteam.html">Our Team</a>
               <a href="/templates/aboutus.html">About Us</a>
-              <a href="/templates/regpays.html">Registration and Payment</a>
             </div>
-          </li>
+       </li>
         </ul>
       </nav>
     </div>
   </header>
-  
+
   <section id="home" class="home">
-    <div class="banner">
-          <br>
-          <h2><span>JRD TATA</span> Innovation Support Center</h2>
-          <button class="btn-79"><span>Explore Projects</span></button>
-        </div>
-        </div>
-  <div class="wave wave1"></div>
-  <div class="wave wave2"></div>
-  <div class="wave wave3"></div>
-</section>
+    <div class="banner-slider">
+      <div class="white-box" id="white-box">
+        <h2 id="white-box-title"></h2>
+        <p id="white-box-description"></p>
+        <button class="learn-more"> 
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Know More</span>
+        </button> 
+      </div>
+      <button class="banner-slider-btn banner-slider-btn-left">&#9664;</button>
+      <div class="banner-slides">
+        <img src="/images/img/ban1.jpg" alt="Event Image 1" data-title="PROJECT DEMONSTRATION AT ARTPARK GARAGE [ 29th June, 2024 ]" data-description="Demonstration day at ARTPARK Garage on June 29th showcases innovative tech projects, featuring cutting-edge AI and robotics, aiming to foster collaboration and inspire advancements in technology" class="active">
+        <img src="/images/img/ban2.png" alt="Event Image 2" data-title="INAUGURATION OF JRD TATA ISC [ 05th May, 2024 ]" data-description="The JRD Tata Innovation Support Centre at IISc, Bangalore, inaugurated on May 5, 2024, featured inspirational speeches, collaborative discussions, and cultural performances, emphasizing innovation and Atmanirbhar Bharat.">
+        <img src="/images/img/ban3.png" alt="Event Image 3" data-title="PRAGATI INNOVATION CHALLENGE [ 22nd March, 2024 ]" data-description="The JRD Tata Innovation Support Centre, IEEE IISc, and EntIISc hosted the Pragati Innovation Challenge on March 22, 2024, engaging students in solving real-world problems with AI/ML, device instrumentation, and biochemistry.">
+      </div>
+      <button class="banner-slider-btn banner-slider-btn-right">&#9654;</button>
+      <div class="dots-container"></div>
+    </div> 
+  </section>
+  
+
 <section id="Profile">
-  <button onclick="window.location.href='/templates/profile.html'"></button>
+  <button onclick="window.location.href='/templates/profile.html'"></button>  
 </section>
-<section id="about" class="about">
-      <h1 class="heading">About Us</h1>
-      <div class="row">
-          <div class="content">
-              <h3>Empowering youth in pursuit of Technology Through Training Innovation and employment: Mission Pragati</h3>
-              <p><span>Mission Pragati</span> empowers youth by offering cutting-edge technology training and employment opportunities, equipping them with essential skills and knowledge to succeed in a rapidly evolving digital world.</p>
-              <a href="demo1.html"><button class="btn-55">WANT to know MORE</button></a>
+<h1 class="news-heading"><a href="/templates/events.html">Events @ JRD TATA ISC</h1></a>
+<section id="news" class="news">
+    <div class="card-container">  
+      <button class="prev-btn" onclick="prevCard()">&#9664;</button>
+      <div class="card-slider">
+        <div class="card">  
+          <div class="card-image">
+            <img src="/images/img/news1.jpg" alt="News Image">
           </div>
+          <div class="card-load-extreme-title"><p><a href="/Detevt/evttemplate/evt1.html">PROJECT DEMONSTRATION AT ARTPARK GARAGE</a></p></div>
+          <div class="card-load-extreme-descripion"><p>Demonstration day at ARTPARK Garage on June 29th showcases innovative tech projects, featuring cutting-edge AI and robotics, aiming to foster collaboration and inspire advancements in technology.</p><h4>29th JUNE, 2024</h4></div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/img/news2.jpg" alt="News Image">
+          </div>
+          <div class="card-load-extreme-title"><p><a href="/Detevt/evttemplate/evt2.html">INAUGURATION OF JRD TATA ISC</a></p></div>
+          <div class="card-load-extreme-descripion"><p>The JRD Tata Innovation Support Centre at IISc, Bangalore, inaugurated on May 5, 2024, featured inspirational speeches, collaborative discussions, and cultural performances, emphasizing innovation and Atmanirbhar Bharat.</p><h4>05th MAY, 2024</h4></div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/img/news3.jpg" alt="News Image">
+          </div>
+          <div class="card-load-extreme-title"><p><a href="/Detevt/evttemplate/evt3.html">PRAGATI INNOVATION CHALLENGE</a></p></div>
+          <div class="card-load-extreme-descripion"><p>The JRD Tata Innovation Support Centre, IEEE IISc, and EntIISc hosted the Pragati Innovation Challenge on March 22, 2024, engaging students in solving real-world problems with AI/ML, device instrumentation, and biochemistry.</p><h4>22nd MARCH, 2024</h4></div>
+        </div>
       </div>
+      <button class="next-btn" onclick="nextCard()">&#9654;</button>
+    </div>
+  </section> 
+  <h1 class="project-heading"><a href="/templates/projects.html">Ongoing projects</h1></a>
+  <section id="program-section" class="program-section">
+    <div class="programs-container">
+        <div class="program-card">
+            <a href="/Detproj/template/copycat.html">
+                <img src="/images/img/hm1.png" alt="Image 1">
+            </a>
+            <p>Copy-Cat Arm</p>
+        </div>
+        <div class="program-card">
+            <a href="/Detproj/template/drone.html">
+                <img src="/images/img/hm2.png" alt="Image 2">
+            </a>
+            <p>Drone with Self-Made Flight Controller</p>
+        </div>
+        <div class="program-card">
+            <a href="/Detproj/template/accident.html">
+                <img src="/images/img/hm3.png" alt="Image 3">
+            </a>
+            <p>Advanced Accident Detection Device</p>
+        </div> 
+        <div class="program-card">
+            <a href="/Detproj/template/wpm.html">
+                <img src="/images/img/hm4.png" alt="Image 4">
+            </a>
+            <p>Workplace Management System</p>
+        </div>
+    </div>
 </section>
-<div class="pt-5 pb-5" style="background-color: #f2f2f2;">
-  <div class="container">
-    <div class="row">
-      <div class="section-head col-sm-12" id="service">
-        <h1>Our Courses</h1>
-        <p>We provide high quality course which are industry-relevant skill training that will help them in securing a better livelihood.
-          </p>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
-          <h6>Interview Courses</h6>
-          <p>Brief  </p>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="pt-5 pb-5">
-  <div class="container">
-    <div class="row">
-      <div class="section-head-1 col-sm-12" style="text-align: center;">
-        <h4 style="margin-top: -5rem;" id="portfolio">Our Projects</h4>
-        
-        <p>We are working on active projects with the <br>Indian Army, Indian Air Force, Karnataka State Police and ARTPARK, BRIDGE Bharat, Accenture and Siemens. ​
-          </p>
-      </div>
-      
-      <div class="col-lg-4 col-sm-6">
-        
-        <div class="item"><a href="/templates/projects.html"><span class="icon feature_box_col_four"><i class="fa fa-robot"></i></span></a>
-          <h6>Surgical robot for army</h6>
-          
-          <p>Brief<br><br><br></p>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"><a href="/templates/projects.html"> <span class="icon feature_box_col_five"><i class="fa fa-plane"></i></span></a>
-          <h6>Pilot Debriefing Software for Airforce</h6>
-          <p>Brief<br><br><br></p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-hospital"></i></span>
-          <h6>Forensics devices for KSP</h6>
-          <p>Brief<br><br><br></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-<div class="communicate">
-  <h3>You contact through the our website or Email </h3>
-  <p>iisc.blr@iis.in</p>
-  <a href=""><button class="btn">Contact Now</button></a>
-</div>
-<div class="testimonials mt-100">
-  <div class="container">
-      <div class="section-header" style="text-align: center;">
-          <h2 style="margin-top: -15rem;">Our Parent Commany</h2>
-          <p style="font-size: 1.4rem;">
-            ARTPARK is our Parent Company
-          </p>
+  <section id="courses"> 
+  <h1 class="courses-heading">Courses Provided</h1>
+  <div class="courses-container">
+    <div class="course-card">
+      <div class="header">
+      <span class="title">Interview Training Course</span>
       </div>
-
-      <div class="owl-carousel testimonials-carousel">
-          <div class="testimonial-item row align-items-center">
-              <div class="testimonial-img">
-                  <img src="/images/img/Atpk.jpeg" alt="Testimonial image">
-              </div>
-              <div class="testimonial-text">
-                  <h3>ARTPARK @ IISc </h3>
-                  <h4>Mission Pragati</h4>
-              </div>
-          </div>
+      <p class="desc">
+        Three-day course focuses on interview analysis, technical skills, and introspective soft skills. </p>
+      <ul class="lists">
+      <li class="list">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+      </svg>
+      <span>Interview Analysis Techniques</span>
+      </li>
+      <li class="list">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+      </svg>
+      <span>Advanced Technical Skills</span>
+      </li>
+      <li class="list">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+      </svg>
+      <span>Story-Based Soft Skills Development</span>
+      </li>
+      </ul><button type="button" class="action">Know More</button>
       </div>
   </div>
-</div>
+</section>
+
 <footer class="footer-distributed">
   <div class="footer-left">
-
-    <h3>JRD<span>TATA ISC</span> </h3>
-
+    <div class="footer-logo">
+        <img src="/images/img/jrdl.png" alt="JRD TATA Logo">
+        <h3>JRD TATA <br><span>Innovation Support Center</span></h3>
+    </div>
     <p class="footer-links">
-      <a href="/templates/index.html" class="link-1">HOME</a>
-      
-      <a href="/templates/projects.html">PROJECTS</a>
-      
-      <a href="/templates/ourteam.html">OUR TEAM</a>
-      
-      <a href="/templates/aboutus.html">ABOUT US</a>
-    </p>
+        <a href="/templates/index.html" class="link-1">HOME</a>
+        <a href="/templates/projects.html">PROJECTS</a>
+        <a href="/templates/ourteam.html">OUR TEAM</a>
+        <a href="/templates/aboutus.html">ABOUT US</a>
+    </p>    
+</div>
 
-    <p class="footer-company-name">JRD Innovation Support Center © 2024</p>
-  </div>
-
-  
-
- 
-  <div class="footer-center">
-
-    <div>
+<div class="footer-center">
+  <div>
       <i class="fa fa-globe" aria-hidden="true"></i>
       <p>India Institiue of Science <span>Bengaluru - 560012, Karnataka, India.</span></p>
     </div>
-
     <div>
       <i class="fa fa-phone"></i>
       <p>+91 8888666588</p>
     </div>
-
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a href="mailto:support@company.com">jrdisc.innovate@iisc.in</a></p>
+      <p><a href="mailto:support@company.com">jrdisc.innovate@iisc.in</a></p>      
     </div>
-
   </div>
-
   <div class="footer-right">
-
     <p class="footer-company-about">
-      <span>About the JRD Tata ISC</span>
+      <span><u>About the JRD Tata ISC</u></span>
       The JRD Tata Innovation Support Centre engages youth in solving national problems through collaboration with government and industry. With IISc experts and interns, we focus on sectors like security, infrastructure, telecom, and healthcare, providing R&D services, developing prototypes, and partnering with MSMEs for production and scaling solutions effectively.
     </p>
-
     <div class="footer-icons">
-
-      <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://twitter.com/login?lang=en"><i class="fab fa-twitter"></i></a>
       <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-
     </div>
-
   </div>
-
-  
-
-
-  
+  <p class="footer-company-name">JRD TATA Innovation Support Center © 2024</p>  
 </footer>
-  <script src="/javascript/scripts.js"></script>
-
-  
+  <script src="/javascript/scripts.js"></script> 
 </body>
 </html> 
+
 
         

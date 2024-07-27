@@ -4,9 +4,7 @@ const menuBtn = document.querySelector('.menu-btn');
 const closeBtn = document.querySelector('.close-btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 const navLinks = document.querySelector('.nav-links');
-
-
-
+const header = document.querySelector('header');
 
 menuBtn.addEventListener('click', () => {
   dropdownContent.classList.toggle('show');
@@ -31,74 +29,42 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// Hide Header on scroll down
-let didScroll;
-let lastScrollTop = 0;
-const delta = 5;
-const navbarHeight = document.querySelector('header').offsetHeight;
-
-window.addEventListener('scroll', function(event) {
-  didScroll = true;
+// Toggle header-scrolled and header-transparent classes on scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    header.classList.add('header-scrolled');
+  } else {
+    header.classList.remove('header-scrolled');
+  }
+  
+  if (window.scrollY > 0) {
+    header.classList.add('header-transparent');
+  } else {
+    header.classList.remove('header-transparent');
+  }
 });
 
-setInterval(function() {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
-
-function hasScrolled() {
-  const st = window.scrollY;
-
-  // Make sure they scroll more than delta
-  if (Math.abs(lastScrollTop - st) <= delta) return;
-
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight) {
-    // Scroll Down
-    document.querySelector('header').classList.remove('nav-down');
-    document.querySelector('header').classList.add('nav-up');
-  } else {
-    // Scroll Up
-    if (st + window.innerHeight < document.documentElement.scrollHeight) {
-      document.querySelector('header').classList.remove('nav-up');
-      document.querySelector('header').classList.add('nav-down');
-    }
-  }
-
-  lastScrollTop = st;
-}
-let currentIndex = 0
+/*Event Slider*/
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slides img');
 
 function showSlide(index) {
-  const slider = document.querySelector('.slider')
-  const images = document.querySelectorAll('.slider img')
-  const imageWidth = images[0].offsetWidth
-
-  images.forEach((image, i) => {
-    image.style.display = i === index ? 'block' : 'none'
-  })
-
-  slider.style.transform = `translateX(${(-index * imageWidth)}px)`
-}
-
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + getTotalSlides()) % getTotalSlides()
-  showSlide(currentIndex)
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
 }
 
 function nextSlide() {
-  currentIndex = (currentIndex + 1) % getTotalSlides()
-  showSlide(currentIndex)
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
 }
 
-function getTotalSlides() {
-  return document.querySelectorAll('.slider img').length
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
 }
 
-// Initial setup
-document.addEventListener('DOMContentLoaded', () => {
-  showSlide(currentIndex)
-})
+setInterval(nextSlide, 5000); // Change image every 3 seconds
+
+// Initially show the first slide
+showSlide(currentSlide);

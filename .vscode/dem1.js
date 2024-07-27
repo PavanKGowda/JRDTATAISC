@@ -1,69 +1,49 @@
-const dropdown = document.querySelector('.dropdown');
-const dropbtn = document.querySelector('.dropbtn');
-const menuBtn = document.querySelector('.menu-btn');
-const closeBtn = document.querySelector('.close-btn');
-const dropdownContent = document.querySelector('.dropdown-content');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".banner-slides img");
+    const whiteBox = document.querySelector(".white-box");
+    const whiteBoxTitle = document.getElementById("white-box-title");
+    const whiteBoxDescription = document.getElementById("white-box-description");
 
-menuBtn.addEventListener('click', () => {
-  dropdownContent.classList.toggle('show');
-  navLinks.classList.toggle('display');
-  menuBtn.style.display = 'none';
-  closeBtn.style.display = 'block';
-});
+    let currentSlide = 0;
 
-closeBtn.addEventListener('click', () => {
-  dropdownContent.classList.remove('show');
-  navLinks.classList.remove('display');
-  menuBtn.style.display = 'block';
-  closeBtn.style.display = 'none';
-});
+    function updateWhiteBox() {
+        const activeSlide = slides[currentSlide];
+        const title = activeSlide.getAttribute("data-title");
+        const description = activeSlide.getAttribute("data-description");
 
-window.addEventListener('click', (e) => {
-  if (!dropdown.contains(e.target) && !dropbtn.contains(e.target)) {
-    dropdownContent.classList.remove('show');
-    navLinks.classList.remove('display');
-    menuBtn.style.display = 'block';
-    closeBtn.style.display = 'none';
-  }
-});
+        whiteBoxTitle.textContent = title;
+        whiteBoxDescription.textContent = description;
 
-// Hide Header on scroll down
-let didScroll;
-let lastScrollTop = 0;
-const delta = 5;
-const navbarHeight = document.querySelector('header').offsetHeight;
-
-window.addEventListener('scroll', function(event) {
-  didScroll = true;
-});
-
-setInterval(function() {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
-
-function hasScrolled() {
-  const st = window.scrollY;
-
-  // Make sure they scroll more than delta
-  if (Math.abs(lastScrollTop - st) <= delta) return;
-
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight) {
-    // Scroll Down
-    document.querySelector('header').classList.remove('nav-down');
-    document.querySelector('header').classList.add('nav-up');
-  } else {
-    // Scroll Up
-    if (st + window.innerHeight < document.documentElement.scrollHeight) {
-      document.querySelector('header').classList.remove('nav-up');
-      document.querySelector('header').classList.add('nav-down');
+        whiteBox.classList.add("fly-in");
+        setTimeout(() => {
+            whiteBox.classList.remove("fly-in");
+        }, 1000);
     }
-  }
 
-  lastScrollTop = st;
-}
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+        });
+        currentSlide = index;
+        updateWhiteBox();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Initialize the first slide and white box
+    showSlide(currentSlide);
+
+    // Reveal elements with a delay for initial page load
+    setTimeout(() => {
+        document.querySelector(".home").classList.add("visible");
+        whiteBox.classList.add("visible");
+    }, 500);
+});
